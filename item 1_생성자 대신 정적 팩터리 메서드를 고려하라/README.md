@@ -57,18 +57,25 @@
 다음은 정적 팩터리 메서드에 흔히 사용하는 명명 방식들이다.
 
 - __from__: 해당 타입의 인스턴스를 반환하는 형변환 메서드
-    ```Date d = Date.from(instant);```
+    - ```Date d = Date.from(instant);```
+
 - __of__: 집계 메서드
-    ```Set<Rank> faceCards = EnumSet.of(JACK, QUEEN, KING);```
+    - ```Set<Rank> faceCards = EnumSet.of(JACK, QUEEN, KING);```
+
 - __valueOf__: from과 of의 자세한 버전
-    ```BigInteger prime = BigInteger.valueOf(Integer.MAX_VALUE);```
+    - ```BigInteger prime = BigInteger.valueOf(Integer.MAX_VALUE);```
+
 - __instatnce/getInstance__: 인스턴스 반환, 같은 인스턴스 보장하지 않음
+
 - __create/newInstance__: 인스턴스 반환, 새로운 인스턴스 보장
+
 - __get*Type*__: getInstance와 같으나 생성할 클래스가 아닌 다른 클래스에 정의할 때 사용
-    ```FileStore fs = Files.getFileStore(path);```
+    - ```FileStore fs = Files.getFileStore(path);```
+
 - __new*Type*__: newInstance와 같으나 생성할 클래스가 아닌 다른 클래스에 정의할 때 사용
+
 - __*type*__: get*Type*과 new*Type*의 간결한 버전
-    ```List<Complaint> litany = Collections.list(legacyLitany);```
+    - ```List<Complaint> litany = Collections.list(legacyLitany);```
 
 ---
 
